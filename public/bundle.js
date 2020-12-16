@@ -1067,7 +1067,7 @@
           }
           return dispatcher.useContext(Context, unstable_observedBits);
         }
-        function useState2(initialState) {
+        function useState(initialState) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState);
         }
@@ -1087,7 +1087,7 @@
           var dispatcher = resolveDispatcher();
           return dispatcher.useLayoutEffect(create, deps);
         }
-        function useCallback2(callback, deps) {
+        function useCallback(callback, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useCallback(callback, deps);
         }
@@ -1349,7 +1349,7 @@
         exports.isValidElement = isValidElement;
         exports.lazy = lazy;
         exports.memo = memo;
-        exports.useCallback = useCallback2;
+        exports.useCallback = useCallback;
         exports.useContext = useContext;
         exports.useDebugValue = useDebugValue;
         exports.useEffect = useEffect;
@@ -1358,7 +1358,7 @@
         exports.useMemo = useMemo;
         exports.useReducer = useReducer;
         exports.useRef = useRef;
-        exports.useState = useState2;
+        exports.useState = useState;
         exports.version = ReactVersion;
       })();
     }
@@ -19329,18 +19329,17 @@ For more info, visit https://fb.me/react-mock-scheduler`);
   const React = __toModule(require_react());
   const ReactDOM = __toModule(require_react_dom());
   const App = () => {
-    const [height, setHeight] = React.useState(0);
-    const [wat, setWat] = React.useState(0);
-    const measuredRef = React.useCallback((node) => {
-      if (node !== null) {
-        setHeight(node.getBoundingClientRect().height);
-      }
-    }, [wat]);
-    return React.createElement("div", null, React.createElement("h1", {
-      ref: measuredRef
-    }, React.createElement("div", null, "Hello, world"), new Array(wat).fill("").map(() => React.createElement("div", null, ":)"))), React.createElement("h2", null, "The above header is ", Math.round(height), "px tall"), React.createElement("button", {
-      onClick: () => setWat(wat + 1)
-    }, "Make it taller"));
+    function getDomian() {
+      var protocol = window.location.protocol;
+      var port = window.location.port;
+      var domian = window.location.protocol + "//" + window.location.hostname;
+      console.log(domian);
+      alert(domain);
+      return domian;
+    }
+    return React.createElement("div", null, React.createElement("h1", null, " Hello React111122221 "), React.createElement("button", {
+      onClick: getDomian
+    }, "获取domain"));
   };
   ReactDOM.render(React.createElement("div", {
     className: "App"

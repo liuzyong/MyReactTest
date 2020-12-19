@@ -21,3 +21,14 @@ This templates comes with the following dependencies and are installed as part o
 - react and react-dom: because it's a React.js template :-)
 
 To add more packages, whether React.js components, or anything else, you can simply `import` the package and Repl.it will find it and install it for you. You can also use the package manager in the sidebar. Read more about packages in Repl.it [here](https://docs.repl.it/repls/packages).
+
+
+## VSCode 打开时使用npm start 启动
+1、 package.json中添加 
+"scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  2、src 文件夹下面添加index.js

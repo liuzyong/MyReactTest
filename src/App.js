@@ -20,16 +20,17 @@ const App = () => {
     <div>
       <h1> Hello React111122221 </h1>
       <button onClick ={getDomian}>获取domain</button>
+      <AjaxTest />
     </div>
   );
 }
 
-ReactDOM.render(
-  <div className="App">
-    <App />
-    <AjaxTest />
-  </div>,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <div className="App">
+//     <App />
+//     <AjaxTest />
+//   </div>,
+//   document.getElementById('root')
+// );
 
 export default App;

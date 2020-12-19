@@ -19329,8 +19329,8 @@ For more info, visit https://fb.me/react-mock-scheduler`);
   const React2 = __toModule(require_react());
   class AjaxTest extends React2.Component {
     state = {
-      name: "ww",
-      url: "wwww.baidu.com"
+      name: "",
+      url: ""
     };
     componentDidMount() {
       const requestUrl = `https://api.github.com/search/repositories?q=re&sort=stars`;
@@ -19346,7 +19346,13 @@ For more info, visit https://fb.me/react-mock-scheduler`);
     }
     render() {
       const {name, url} = this.state;
-      return React2.createElement("div", null, React2.createElement("h2", null, " AjaxTest  Loding Repo ", React2.createElement("a", {
+      let content = "";
+      if (name === "") {
+        content = `Loading `;
+      } else {
+        content = `the most stars Repo `;
+      }
+      return React2.createElement("div", null, React2.createElement("h2", null, " AjaxTest: ", content, React2.createElement("a", {
         href: url
       }, name)));
     }

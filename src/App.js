@@ -1,6 +1,8 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
+import AjaxTest from './components/ajax'
+
 const App = () => {
 
   function getDomian() {
@@ -25,6 +27,7 @@ const App = () => {
 ReactDOM.render(
   <div className="App">
     <App />
+    <AjaxTest />
   </div>,
   document.getElementById('root')
 );

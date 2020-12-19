@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +16,7 @@
     "esbuild": "^0.5.14",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "static-here": "^1.0.0"
+    "static-here": "^1.0.0",
+    "react-scripts": "4.0.1"
   }
 }
